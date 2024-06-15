@@ -1,2 +1,109 @@
-Sat Jun 15 18:08:35 UTC 2024
-Linux
+Sat Jun 15 18:10:44 UTC 2024
+Sat Jun 15 18:14:17 UTC 2024
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  1.6 170556 16320 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2  0.0  0.0      0     0 ?        S    18:00   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   18:00   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   18:00   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I<   18:00   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I<   18:00   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I<   18:00   0:00 [kworker/0:0H-events_highpri]
+root           9  0.0  0.0      0     0 ?        I    18:00   0:00 [kworker/u30:0-events_unbound]
+root          10  0.0  0.0      0     0 ?        I<   18:00   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    18:00   0:00 [rcu_tasks_kthread]
+root          12  0.0  0.0      0     0 ?        I    18:00   0:00 [rcu_tasks_rude_kthread]
+root          13  0.0  0.0      0     0 ?        I    18:00   0:00 [rcu_tasks_trace_kthread]
+root          14  0.0  0.0      0     0 ?        S    18:00   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    18:00   0:00 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    18:00   0:00 [migration/0]
+root          18  0.0  0.0      0     0 ?        S    18:00   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    18:00   0:00 [kdevtmpfs]
+root          21  0.0  0.0      0     0 ?        I<   18:00   0:00 [inet_frag_wq]
+root          22  0.0  0.0      0     0 ?        S    18:00   0:00 [kauditd]
+root          23  0.0  0.0      0     0 ?        S    18:00   0:00 [khungtaskd]
+root          24  0.0  0.0      0     0 ?        S    18:00   0:00 [oom_reaper]
+root          27  0.0  0.0      0     0 ?        I<   18:00   0:00 [writeback]
+root          28  0.0  0.0      0     0 ?        S    18:00   0:00 [kcompactd0]
+root          29  0.0  0.0      0     0 ?        SN   18:00   0:00 [khugepaged]
+root          30  0.0  0.0      0     0 ?        I<   18:00   0:00 [kintegrityd]
+root          31  0.0  0.0      0     0 ?        I<   18:00   0:00 [kblockd]
+root          32  0.0  0.0      0     0 ?        I<   18:00   0:00 [blkcg_punt_bio]
+root          33  0.0  0.0      0     0 ?        S    18:00   0:00 [xen-balloon]
+root          34  0.0  0.0      0     0 ?        I<   18:00   0:00 [tpm_dev_wq]
+root          35  0.0  0.0      0     0 ?        I<   18:00   0:00 [md]
+root          36  0.0  0.0      0     0 ?        I<   18:00   0:00 [edac-poller]
+root          37  0.0  0.0      0     0 ?        S    18:00   0:00 [watchdogd]
+root          38  0.0  0.0      0     0 ?        I<   18:00   0:00 [kworker/0:1H-kblockd]
+root          72  0.0  0.0      0     0 ?        S    18:00   0:00 [kswapd0]
+root          75  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfsalloc]
+root          76  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs_mru_cache]
+root          79  0.0  0.0      0     0 ?        I<   18:00   0:00 [kthrotld]
+root          94  0.0  0.0      0     0 ?        S    18:00   0:00 [xenbus]
+root          95  0.0  0.0      0     0 ?        S    18:00   0:00 [xenwatch]
+root         135  0.0  0.0      0     0 ?        I<   18:00   0:00 [nvme-wq]
+root         137  0.0  0.0      0     0 ?        I<   18:00   0:00 [nvme-reset-wq]
+root         139  0.0  0.0      0     0 ?        I<   18:00   0:00 [nvme-delete-wq]
+root         162  0.0  0.0      0     0 ?        I<   18:00   0:00 [mld]
+root         163  0.0  0.0      0     0 ?        I<   18:00   0:00 [ipv6_addrconf]
+root         173  0.0  0.0      0     0 ?        I<   18:00   0:00 [kstrp]
+root         182  0.0  0.0      0     0 ?        I<   18:00   0:00 [zswap-shrink]
+root         183  0.0  0.0      0     0 ?        I<   18:00   0:00 [kworker/u31:0]
+root         985  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-buf/xvda1]
+root         986  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-conv/xvda1]
+root         987  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-reclaim/xvd]
+root         988  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-blockgc/xvd]
+root         989  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-inodegc/xvd]
+root         990  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-log/xvda1]
+root         991  0.0  0.0      0     0 ?        I<   18:00   0:00 [xfs-cil/xvda1]
+root         992  0.0  0.0      0     0 ?        S    18:00   0:00 [xfsaild/xvda1]
+root        1046  0.0  1.7  52628 17440 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd-journald
+root        1090  0.0  1.1  30664 10932 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd-udevd
+root        1110  0.0  0.0      0     0 ?        I    18:00   0:00 [kworker/0:5-cgroup_destroy]
+root        1286  0.0  0.0      0     0 ?        I    18:00   0:00 [kworker/0:7-events_power_efficient]
+systemd+    1741  0.0  1.3  21204 13452 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd-resolved
+root        1742  0.0  0.2  20224  2332 ?        S<sl 18:00   0:00 /sbin/auditd
+root        1825  0.0  0.0      0     0 ?        I<   18:00   0:00 [cryptd]
+root        1868  0.0  0.0      0     0 ?        I<   18:00   0:00 [ata_sff]
+root        1882  0.0  0.0      0     0 ?        S    18:00   0:00 [scsi_eh_0]
+root        1885  0.0  0.0      0     0 ?        I<   18:00   0:00 [scsi_tmf_0]
+root        1890  0.0  0.0      0     0 ?        S    18:00   0:00 [scsi_eh_1]
+root        1891  0.0  0.0      0     0 ?        I<   18:00   0:00 [scsi_tmf_1]
+root        1917  0.0  0.0      0     0 ?        I    18:00   0:00 [kworker/u30:5-events_unbound]
+root        1929  0.0  0.0      0     0 ?        I<   18:00   0:00 [rpciod]
+root        1933  0.0  0.0      0     0 ?        I<   18:00   0:00 [xprtiod]
+root        1954  0.0  0.6  15292  6448 ?        Ss   18:00   0:00 /usr/bin/systemd-inhibit --what=handle-suspend-key:handle-hibernate-key --who=noah --why=acpid instead --mode=block /usr/sbin/acpid -f
+libstor+    1959  0.0  0.2   2756  1972 ?        Ss   18:00   0:00 /usr/bin/lsmd -d
+root        1961  1.5  0.6  89004  5956 ?        Ssl  18:00   0:12 /usr/sbin/rngd -f -x pkcs11 -x nist
+root        1963  0.0  0.7  15780  7704 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd-homed
+root        1964  0.0  1.0  17600  9828 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd-logind
+dbus        1965  0.0  0.3   8372  3848 ?        Ss   18:00   0:00 /usr/bin/dbus-broker-launch --scope system --audit
+systemd+    1966  0.0  1.0 235872  9780 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd-networkd
+dbus        1987  0.0  0.2   5264  2748 ?        S    18:00   0:00 dbus-broker --log 4 --controller 9 --machine-id 2dc407cfc92b43c986fe63d209024cbe --max-bytes 536870912 --max-fds 4096 --max-matches 16384 --audit
+root        1993  0.0  0.3 281024  3536 ?        Ssl  18:00   0:00 /usr/sbin/gssproxy -D
+root        2014  0.0  0.1   2668  1140 ?        S    18:00   0:00 /usr/sbin/acpid -f
+root        2147  0.0  1.7 725420 17164 ?        Ssl  18:00   0:00 /usr/bin/amazon-ssm-agent
+root        2151  0.0  0.7  13304  7708 ?        Ss   18:00   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        2158  0.0  0.2   4728  2564 ?        Ss   18:00   0:00 /usr/sbin/atd -f
+root        2162  0.0  0.1 221344  1080 tty1     Ss+  18:00   0:00 /sbin/agetty -o -p -- \u --noclear - linux
+root        2163  0.0  0.1 221388  1080 ttyS0    Ss+  18:00   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+chrony      2180  0.0  0.3  86516  3212 ?        S    18:00   0:00 /usr/sbin/chronyd -F 2
+root        2216  0.0  1.0  14760  9792 ?        Ss   18:01   0:00 sshd: ec2-user [priv]
+root        2220  0.0  0.6  15292  6468 ?        Ss   18:01   0:00 /usr/lib/systemd/systemd-userdbd
+ec2-user    2256  0.0  1.3  19900 12884 ?        Ss   18:01   0:00 /usr/lib/systemd/systemd --user
+ec2-user    2272  0.0  0.6 106524  6432 ?        S    18:01   0:00 (sd-pam)
+ec2-user    2279  0.0  0.6  14760  6072 ?        S    18:01   0:00 sshd: ec2-user@pts/0
+ec2-user    2280  0.0  0.5 224028  4952 pts/0    Ss   18:01   0:00 -bash
+root        2352  0.0  0.8 233292  7868 pts/0    S+   18:03   0:00 sudo su
+root        2354  0.0  0.2 233292  2532 pts/1    Ss   18:03   0:00 sudo su
+root        2355  0.0  0.4 225204  4456 pts/1    S    18:03   0:00 su
+root        2356  0.0  0.5 224192  5068 pts/1    S    18:03   0:00 bash
+root        2569  0.0  0.0      0     0 ?        I    18:10   0:00 [kworker/0:0-events_power_efficient]
+root        2608  0.0  0.6  15648  6596 ?        S    18:11   0:00 systemd-userwork: waiting...
+root        2659  0.0  0.6  15648  6540 ?        S    18:12   0:00 systemd-userwork: waiting...
+root        2660  0.0  0.6  15648  6540 ?        S    18:12   0:00 systemd-userwork: waiting...
+root        2726  0.0  0.2 223484  2712 pts/1    R+   18:14   0:00 ps -aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  1.6 170556 16320 ?        Ss   18:00   0:00 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2  0.0  0.0      0     0 ?        S    18:00   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   18:00   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   18:00   0:00 [rcu_par_gp]
