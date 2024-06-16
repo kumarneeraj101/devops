@@ -1,0 +1,38 @@
+##How to define variables , assign variables and evaluation to refer in in Unix shell script , perl, python, Pyspark, Scala, Java,  T-SQL, PL-SQL, MongoDB?
+
+1. **Unix Shell Script**:
+   - To define a variable: Use the format `VAR_NAME=value`.
+   - To assign a value: `VAR_NAME="Hello, World!"`.
+   - To evaluate and refer to a variable: Use `$VAR_NAME`.
+
+2. **Perl**:
+   - To define a variable: Simply assign a value, e.g., `$my_var = 42;`.
+   - To evaluate and refer to a variable: Use `$my_var`.
+
+3. **Python**:
+   - To define a variable: Assign a value, e.g., `my_var = 3.14`.
+   - To evaluate and refer to a variable: Use `my_var`.
+
+4. **Pyspark**:
+   - Similar to Python, define and use variables.
+
+5. **Scala**:
+   - Define: `val myVar = 42`.
+   - Evaluate: `myVar`.
+
+6. **Java**:
+   - Declare: `int myVar = 10;`.
+   - Refer: `myVar`.
+
+7. **T-SQL** (SQL Server):
+   - Declare: `DECLARE @myVar INT = 100;`.
+   - Refer: `@myVar`.
+
+8. **PL-SQL** (Oracle):
+   - Declare: `myVar NUMBER := 42;`.
+   - Refer: `myVar`.
+
+9. **MongoDB** (JavaScript-like syntax):
+   - Define: `var myVar = "Hello";`.
+   - Refer: `myVar`.
+
