@@ -1,0 +1,64 @@
+##KN - All In One Programming
+##How to comment in html , unix shell script , perl, python, Pyspark, Scala, Java,  T-SQL, PL-SQL, MongoDB?
+
+Certainly! Here’s how you can add comments in various programming languages:
+1.	HTML:
+o	HTML comments are not displayed in the browser but can help document your code.
+o	Use the <!-- ... --> syntax to create comments.
+o	Example:
+o	<!-- This is a comment -->
+o	<p>This is a paragraph.</p>
+2.	Unix Shell Script (Bash):
+o	Use the # symbol to create single-line comments.
+o	For multi-line comments, you can use a heredoc or surround the code with <<EOF ... EOF.
+o	Example:
+o	# This is a single-line comment
+o	#!/bin/sh
+o	# do valuable stuff here
+o	touch /tmp/a
+o	# now comment out all the stuff below up to the EOF
+o	echo <<EOF
+o	...
+o	...
+o	EOF
+3.	Perl:
+o	Use # for single-line comments.
+o	For multi-line comments, you can use POD (Plain Old Documentation) with =begin comment ... =end comment.
+o	Example:
+o	# This is a single-line comment
+o	=begin comment
+o	This is a multi-line comment.
+o	It can span multiple lines.
+o	=end comment
+4.	Python:
+o	Use # for single-line comments.
+o	Python does not have a direct syntax for multi-line comments, but you can use triple-quoted strings (docstrings) to create multiline comments.
+o	Example:
+o	# This is a single-line comment
+o	"""
+o	This is a multi-line comment.
+o	It can span multiple lines.
+o	"""
+5.	Pyspark, Scala, and Java:
+o	Use // for single-line comments.
+o	For multi-line comments, use /* ... */.
+o	Example (Java):
+o	// This is a single-line comment
+o	/*
+o	 * This is a multi-line comment.
+o	 * It can span multiple lines.
+o	 */
+6.	T-SQL and PL-SQL:
+o	Use -- for single-line comments.
+o	For multi-line comments, use /* ... */.
+o	Example (T-SQL):
+o	-- This is a single-line comment
+o	/*
+o	 This is a multi-line comment.
+o	 It can span multiple lines.
+o	*/
+7.	MongoDB:
+o	MongoDB does not have specific comment syntax within queries.
+o	You can use // for single-line comments in the MongoDB shell.
+o	Example:
+o	// This is a single-line comment
