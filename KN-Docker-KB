@@ -1,0 +1,30 @@
+#KN-Docker-KB
+
+#To see all images present in my KN local machine
+docker image
+
+#To find out images in docker hub
+ docker search Jenkins
+
+#To download image from dockerhub to local machine
+docker pull jenkins
+
+#To give name to container
+docker run -it --name kn-docker-container ubuntu /bin/bash
+
+#To check service is started ot not
+service docker status
+
+#To starrt container
+docker start kn-docker-container 
+
+# To go inside container
+ docker atttach kn-docker-container 
+
+# To see all container
+ docker ps
+# To stop container
+ docker stop kn-docker-container 
+
+#To delete container
+ docker rm kn-docker-container 
