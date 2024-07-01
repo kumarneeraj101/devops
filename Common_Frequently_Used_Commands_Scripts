@@ -22,7 +22,54 @@ sudo su
 su - ansible
 
 
-to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+Ansible ad-hoc commands are great for performing quick, one-time tasks without writing a full playbook. Here are some of the most frequently used command modules with examples:
+
+1. **Ping Module**: Used to test connectivity.
+   ```bash
+   ansible all -m ping
+   ```
+
+2. **Command Module**: Executes commands on remote nodes.
+   ```bash
+   ansible all -m command -a "uptime"
+   ```
+
+3. **Shell Module**: Executes shell commands on remote nodes.
+   ```bash
+   ansible all -m shell -a "echo Hello, World!"
+   ```
+
+4. **Copy Module**: Copies files to remote nodes.
+   ```bash
+   ansible all -m copy -a "src=/path/to/local/file dest=/path/to/remote/file"
+   ```
+
+5. **User Module**: Manages user accounts.
+   ```bash
+   ansible all -m user -a "name=johndoe state=present"
+   ```
+
+6. **Package Module**: Manages packages.
+   ```bash
+   ansible all -m apt -a "name=nginx state=present" -b
+   ```
+
+7. **Service Module**: Manages services.
+   ```bash
+   ansible all -m service -a "name=nginx state=started" -b
+   ```
+
+These examples demonstrate the simplicity and power of Ansible ad-hoc commands¹². Do you have a specific task in mind that you'd like to automate with Ansible?
+
+Source: Conversation with Copilot, 7/1/2024
+(1) Introduction to ad hoc commands - Ansible Documentation. https://docs.ansible.com/ansible/latest/command_guide/intro_adhoc.html.
+(2) Master the Power of Ansible Ad Hoc Commands [Tutorial] - GoLinuxCloud. https://www.golinuxcloud.com/ansible-ad-hoc-commands/.
+(3) How To Manage Multiple Servers with Ansible Ad Hoc Commands. https://www.digitalocean.com/community/cheatsheets/how-to-manage-multiple-servers-with-ansible-ad-hoc-commands.
+(4) The top 100 Ansible modules – Mike's Software Blog. https://mike42.me/blog/2019-01-the-top-100-ansible-modules.
+
+
+
+FAILED - to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
 /$ANSIBLE**************************************************************************************************************************************/
 
