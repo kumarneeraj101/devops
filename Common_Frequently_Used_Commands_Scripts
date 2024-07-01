@@ -2,6 +2,7 @@
 sudo su
 sw - ansible
 alias l="clear;date; hostname; whoami; pwd; ls -lrta"
+ansible all  -m shell -a "ps -aef | grep httpd"
 
 /$Common_Frequently_Used_Commands_Scripts**************************************************************************************************************************************/
 
@@ -20,6 +21,7 @@ https://www.geeksforgeeks.org/ansible-cheat-sheet/
 
 sudo su
 su - ansible
+ansible all  -m shell -a "ps -aef | grep httpd"
 
 
 Ansible ad-hoc commands are great for performing quick, one-time tasks without writing a full playbook. Here are some of the most frequently used command modules with examples:
