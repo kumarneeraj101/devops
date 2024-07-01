@@ -10,9 +10,16 @@ alias l="clear;date; hostname; whoami; pwd; ls -lrta"
 
 
 
+
 /^ANSIBLE**************************************************************************************************************************************/
+https://www.edureka.co/blog/wp-content/uploads/2018/11/Ansible-Cheat_Sheet_Edureka.pdf
+https://blog.prasadsuman.me/ansible-cheat-sheet-with-real-time-use-cases-part-1
+https://blog.prasadsuman.me/ansible-cheat-sheet-with-real-time-use-cases-part-2
+https://www.geeksforgeeks.org/ansible-cheat-sheet/
+
+
 sudo su
-sw - ansible
+su - ansible
 
 
 to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
