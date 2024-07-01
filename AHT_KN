@@ -1,0 +1,9 @@
+/^*******************************************************************************************************************************************/
+While using  AWS ec2  why we get  this error Putty Fatal Error connection Network Error: Software caused connection abort and how to fix that id does not happens in future?
+Set Keepalive Intervals:
+Configure PuTTY to send keepalive packets to prevent the connection from timing out.
+Open PuTTY.
+In the left-hand menu, go to Connection.
+Set Seconds between keepalives to 240 (or another suitable value).
+Check Enable TCP keepalives (SO_KEEPALIVE option). !PuTTY Keepalive Settings
+/$*******************************************************************************************************************************************/
