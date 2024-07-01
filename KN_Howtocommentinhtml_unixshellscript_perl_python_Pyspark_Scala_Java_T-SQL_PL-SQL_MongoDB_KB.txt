@@ -62,3 +62,18 @@ o	MongoDB does not have specific comment syntax within queries.
 o	You can use // for single-line comments in the MongoDB shell.
 o	Example:
 o	// This is a single-line comment
+
+
+8. How to comment out a code on VS code terraform
+
+Attaching the Terraform documentation for commenting
+
+The Terraform language supports three different syntaxes for comments:
+
+# begins a single-line comment, ending at the end of the line.
+
+// also begins a single-line comment, as an alternative to #.
+
+/* and */ are start and end delimiters for a comment that might span over multiple lines.
+
+The # single-line comment style is the default comment style and should be used in most cases. Automatic configuration formatting tools may automatically transform // comments into # comments, since the double-slash ...
