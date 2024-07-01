@@ -67,7 +67,112 @@ Source: Conversation with Copilot, 7/1/2024
 (3) How To Manage Multiple Servers with Ansible Ad Hoc Commands. https://www.digitalocean.com/community/cheatsheets/how-to-manage-multiple-servers-with-ansible-ad-hoc-commands.
 (4) The top 100 Ansible modules – Mike's Software Blog. https://mike42.me/blog/2019-01-the-top-100-ansible-modules.
 
+/******************************************************/
+Ansible ad-hoc commands are useful for performing quick tasks on remote servers without the need for writing a playbook. Here are some frequently used ad-hoc command modules in Ansible with examples:
 
+### 1. **ping**
+Checks connectivity to hosts.
+
+```bash
+ansible all -m ping
+ansible all -i inventory_file -m ping
+```
+
+### 2. **command**
+Executes commands on remote hosts.
+
+```bash
+ansible all -a "/bin/hostname"
+ansible all -i inventory_file -a "ls -l /tmp"
+```
+
+### 3. **shell**
+Executes shell commands on remote hosts.
+
+```bash
+ansible all -m shell -a "uname -a"
+ansible all -i inventory_file -m shell -a "df -h"
+```
+
+### 4. **copy**
+Copies files to remote hosts.
+
+```bash
+ansible all -m copy -a "src=/etc/hosts dest=/tmp/hosts"
+ansible all -i inventory_file -m copy -a "src=myapp.conf dest=/etc/myapp.conf mode=0644"
+```
+
+### 5. **file**
+Manages files and directories on remote hosts.
+
+```bash
+ansible all -m file -a "path=/tmp/foo state=directory"
+ansible all -i inventory_file -m file -a "path=/etc/myapp.conf state=absent"
+```
+
+### 6. **service**
+Manages services on remote hosts.
+
+```bash
+ansible all -m service -a "name=httpd state=started"
+ansible all -i inventory_file -m service -a "name=nginx state=restarted"
+```
+
+### 7. **yum**
+Manages packages with yum package manager.
+
+```bash
+ansible all -m yum -a "name=httpd state=installed"
+ansible all -i inventory_file -m yum -a "name=nginx state=latest"
+```
+
+### 8. **apt**
+Manages packages with apt package manager (for Debian/Ubuntu).
+
+```bash
+ansible all -m apt -a "name=nginx state=installed"
+ansible all -i inventory_file -m apt -a "name=apache2 state=latest"
+```
+
+### 9. **lineinfile**
+Manages lines in text files on remote hosts.
+
+```bash
+ansible all -m lineinfile -a "path=/etc/hosts line='192.168.1.1 server1'"
+ansible all -i inventory_file -m lineinfile -a "path=/etc/hosts line='192.168.1.2 server2' state=absent"
+```
+
+### 10. **template**
+Templates a file out to a remote server.
+
+```bash
+ansible all -m template -a "src=myapp.j2 dest=/etc/myapp.conf"
+ansible all -i inventory_file -m template -a "src=myapp.j2 dest=/etc/myapp.conf"
+```
+
+### 11. **debug**
+Prints debug information.
+
+```bash
+ansible all -m debug -a "msg='Hello, world!'"
+ansible all -i inventory_file -m debug -a "msg='Debug message'"
+```
+
+### 12. **wait_for**
+Waits for a condition before continuing.
+
+```bash
+ansible all -m wait_for -a "timeout=300 port=80 state=started"
+ansible all -i inventory_file -m wait_for -a "host=example.com port=443 state=stopped"
+```
+
+### Notes:
+- **-m**: Specifies the module to use.
+- **-a**: Specifies arguments for the module.
+- **-i**: Specifies the inventory file containing host information.
+
+These ad-hoc commands allow for quick management and troubleshooting tasks across multiple servers without needing to create and run a full Ansible playbook. Adjust the parameters and options as per your specific requirements and environment configurations.
+/*************************************************************/
 
 FAILED - to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
