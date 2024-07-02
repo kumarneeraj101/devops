@@ -3,6 +3,7 @@ sudo su
 su - ansible
 alias l="clear;date; hostname; whoami; pwd; ls -lrta"
 ansible all  -m shell -a "ps -aef | grep httpd"
+sudo systemctl list-units --type=service --all | grep -i running
 
 
 /$Common_Frequently_Used_Commands_Scripts**************************************************************************************************************************************/
@@ -52,6 +53,8 @@ ansible all -m command -a "uptime"
 ansible all -a "which httpd"
 ansible all -a " sudo yum install httpd -y"
 ansible all -a " sudo yum install httpd -y"
+ansible all -m shell -a "systemctl list-units --type=service --all" | grep running
+ansible all -m shell -a "systemctl list-units --type=service --all" | grep running | grep -i nginx
 
 154  ansible all -b -m yum -a "pkg=httpd state=present"
 
