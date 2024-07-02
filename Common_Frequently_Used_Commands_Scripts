@@ -274,8 +274,32 @@ FAILED - to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-rele
 
 /$ANSIBLE**************************************************************************************************************************************/
 
+---
+- name: Install and start httpd
+  hosts: dev-servers
+  user: ansible
+  become: yes
+  connection: ssh
 
+  tasks:
+    - name: Ensure  httpd is  installed
+      yum:
+        name: httpd
+        state: present
+        update_cache: true
+      notify:
+        - Start httpd
 
+    - name: Ensure httpd is running
+      service:
+        name: httpd
+        state: started
+
+  handlers:
+    - name: Start httpd
+      service:
+        name: httpd
+        state: started
 /^ANSIBLE**************************************************************************************************************************************/
 
 
