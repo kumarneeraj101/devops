@@ -298,5 +298,104 @@ FAILED - to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-rele
         state: started
 /^ANSIBLE**************************************************************************************************************************************/
 
+---
+- name: Install packages and update system
+  hosts: all
+  become: yes  # Run tasks with elevated privileges (sudo)
+
+  tasks:
+    - name: Update package cache
+      package:
+        name: '*'
+        state: latest
+      register: update_cache
+      until: update_cache is success
+
+    - name: Install necessary packages
+      package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - nginx
+        - mysql-server
+        - python3
+        - git
 
 /$ANSIBLE**************************************************************************************************************************************/
+
+/^ANSIBLE**************************************************************************************************************************************/
+---
+- name: Configure file and directory permissions
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Set permissions for directory
+      file:
+        path: /path/to/directory
+        owner: user1
+        group: group1
+        mode: 0755
+        recurse: yes
+
+    - name: Set permissions for file
+      file:
+        path: /path/to/file
+        owner: user2
+        group: group2
+        mode: 0644
+
+/$ANSIBLE**************************************************************************************************************************************/
+
+
+/^ANSIBLE**************************************************************************************************************************************/
+---
+- name: Deploy configuration files
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Copy configuration file
+      copy:
+        src: /path/to/local/file
+        dest: /path/to/remote/file
+        owner: root
+        group: root
+        mode: 0644
+      notify:
+        - restart service
+
+  handlers:
+    - name: restart service
+      service:
+        name: nginx
+        state: restarted
+
+/$ANSIBLE**************************************************************************************************************************************/
+
+
+/^ANSIBLE**************************************************************************************************************************************/
+---
+- name: Update system and reboot if needed
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Update all packages to the latest version
+      yum:
+        name: '*'
+        state: latest
+      register: update_result
+      changed_when: update_result.changed
+
+    - name: Reboot the system if kernel has been updated
+      reboot:
+        reboot_timeout: 300
+      when: update_result.changed
+
+/$ANSIBLE**************************************************************************************************************************************/
+
+/^ANSIBLE**************************************************************************************************************************************/
+
+/$ANSIBLE**************************************************************************************************************************************/
+
