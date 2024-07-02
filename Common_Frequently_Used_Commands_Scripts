@@ -1,8 +1,9 @@
 /^Common_Frequently_Used_Commands_Scripts**************************************************************************************************************************************/
 sudo su
-sw - ansible
+su - ansible
 alias l="clear;date; hostname; whoami; pwd; ls -lrta"
 ansible all  -m shell -a "ps -aef | grep httpd"
+
 
 /$Common_Frequently_Used_Commands_Scripts**************************************************************************************************************************************/
 
@@ -18,11 +19,49 @@ https://blog.prasadsuman.me/ansible-cheat-sheet-with-real-time-use-cases-part-1
 https://blog.prasadsuman.me/ansible-cheat-sheet-with-real-time-use-cases-part-2
 https://www.geeksforgeeks.org/ansible-cheat-sheet/
 
-
+/*************/
 sudo su
+more  /etc/ssh/sshd_config | grep -v "#" | sort -u
 su - ansible
-ansible all  -m shell -a "ps -aef | grep httpd"
+ssh-keygen
+cd .ssh/
+ssh-copy-id ansible@10.10.1.203
+ssh-copy-id ansible@10.10.1.19
 
+ssh 10.10.1.203
+ssh 10.10.1.19
+vimsudo
+
+/***********************************************************/
+[ansible@ip-10-10-1-134 ~]$ more /etc/ansible/ansible.cfg | grep -v "#"
+   [defaults]
+   inventory = /etc/ansible/hosts
+   sudo_user  = root
+   command_warnings = False
+/***********************************************************/
+
+/SU*******************************************************/
+ansible -m ping all | egrep "10|ping"
+ansible all --list-hosts
+ansible dev-server  --list-hosts
+ansible dev-servers[0-3] --list-hosts
+
+ansible all  -m shell -a "ps -aef | grep httpd"
+ansible all -m command -a "uptime"
+
+ansible all -a "which httpd"
+ansible all -a " sudo yum install httpd -y"
+ansible all -a " sudo yum install httpd -y"
+
+154  ansible all -b -m yum -a "pkg=httpd state=present"
+
+  182  ansible all  -m shell -a "df -h"
+  183  ansible all  -m shell -a "ps -aef"
+  184  ansible all  -m shell -a "netstat"
+  185  ansible all  -m shell -a "vmstat"
+190  ansible all  -m shell -a "ps -aef | grep httpd"
+ansible all -b -m yum -a "pkg=httpd state=latest"
+ansible all  -m shell -a "which httpd"
 
 Ansible ad-hoc commands are great for performing quick, one-time tasks without writing a full playbook. Here are some of the most frequently used command modules with examples:
 
@@ -178,12 +217,57 @@ These ad-hoc commands allow for quick management and troubleshooting tasks acros
 
 FAILED - to install Ansible	wget https://d1.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
+/*************************************************************/
+# Display facts from all hosts and store them indexed by I(hostname) at C(/tmp/facts). 
+# ansible all -m setup --tree /tmp/facts 
+# Display only facts regarding memory found by ansible on all hosts and output them. 
+# ansible all -m setup -a 'filter=ansible_*_mb' 
+# Display only facts returned by facter. 
+# ansible all -m setup -a 'filter=facter_*' 
+# Collect only facts returned by facter. 
+# ansible all -m setup -a 'gather_subset=!all,!any,facter' - name: Collect only facts returned by facter setup: gather_subset: - '!all' - '!any' - facter 
+# Display only facts about certain interfaces. 
+# ansible all -m setup -a 'filter=ansible_eth[0-2]' 
+# Restrict additional gathered facts to network and virtual (includes default minimum facts) 
+# ansible all -m setup -a 'gather_subset=network,virtual' 
+# Collect only network and virtual (excludes default minimum facts) 
+# ansible all -m setup -a 'gather_subset=!all,!any,network,virtual' 
+# Do not call puppet facter or ohai even if present. 
+# ansible all -m setup -a 'gather_subset=!facter,!ohai' 
+# Only collect the default minimum amount of facts: 
+# ansible all -m setup -a 'gather_subset=!all' 
+# Collect no facts, even the default minimum subset of facts:
+# ansible all -m setup -a 'gather_subset=!all,!min'
+
 /$ANSIBLE**************************************************************************************************************************************/
 
 
 
 /^ANSIBLE**************************************************************************************************************************************/
+---
+- name: Install and start Nginx  SU
+  hosts: dev-servers
+  become: yes
 
+  tasks:
+    - name: Ensure Nginx is installed
+      yum:
+        name: nginx
+        state: present
+        update_cache: true
+      notify:
+        - Start Nginx
+
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started
+
+  handlers:
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
 
 /$ANSIBLE**************************************************************************************************************************************/
 
