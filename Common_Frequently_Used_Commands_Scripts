@@ -4,13 +4,9 @@ su - ansible
 alias l="clear;date; hostname; whoami; pwd; ls -lrta"
 ansible all  -m shell -a "ps -aef | grep httpd"
 sudo systemctl list-units --type=service --all | grep -i running
-
+ansible all -m shell -a "ps -aux | sort -nrk 3,3 | head "
 
 /$Common_Frequently_Used_Commands_Scripts**************************************************************************************************************************************/
-
-
-
-
 
 
 
@@ -65,7 +61,7 @@ ansible all -m shell -a "systemctl list-units --type=service --all" | grep runni
 190  ansible all  -m shell -a "ps -aef | grep httpd"
 ansible all -b -m yum -a "pkg=httpd state=latest"
 ansible all  -m shell -a "which httpd"
-
+ansible all -m shell -a "ps -aux | sort -nrk 3,3 | head "
 Ansible ad-hoc commands are great for performing quick, one-time tasks without writing a full playbook. Here are some of the most frequently used command modules with examples:
 
 1. **Ping Module**: Used to test connectivity.
