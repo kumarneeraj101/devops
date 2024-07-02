@@ -1,5 +1,19 @@
 #KN-Docker-KB
 
+
+docker images
+docker search
+docker pull
+docker run -it --name kn_container ubuntu /bin/bash
+service docker status
+docker start kn_container
+docker attach kn_container
+docker ps -a 
+docker ps 
+docker stop kn_container
+docker rm kn_container
+
+
 #To see all images present in my KN local machine
 docker image
 
